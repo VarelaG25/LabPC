@@ -1,0 +1,80 @@
+/*
+ * Variables de diseño de LabPC: colores, tipografía, formas y sombras.
+ * Tenerlas en un solo lugar evita repetir valores en cada vista.
+ */
+:root {
+  /* Marca */
+  --color-primary: #5545d9;
+  --color-primary-hover: #4638be;
+  --color-primary-soft: #f0edff;
+  --color-primary-border: #dcd7fc;
+  --color-primary-focus: rgba(85, 69, 217, 0.1);
+  --color-accent: #b58aff;
+  --gradient-primary: linear-gradient(90deg, #5845d5, #4a3bc8);
+  --gradient-primary-hover: linear-gradient(90deg, #4e3bc9, #4031b6);
+
+  /* Menú lateral y panel de marca */
+  --color-sidebar: #0c1033;
+  --color-sidebar-text: #a4a5b8;
+  --gradient-brand: linear-gradient(180deg, #11123e 0%, #191653 45%, #20256b 100%);
+
+  /* Texto */
+  --color-text-strong: #1a1b35;
+  --color-text: #30304d;
+  --color-text-muted: #717184;
+  --color-text-subtle: #64748b;
+  --color-text-placeholder: #b7b7c5;
+
+  /* Superficies */
+  --color-bg-app: #f4f5f9;
+  --color-bg-auth: #f8ebe7;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8f9fb;
+  --color-surface-subtle: #fcfcfd;
+  --color-border: #ebecef;
+  --color-border-strong: #d1d2d9;
+
+  /* Estados (badges) */
+  --color-success: #1e7e4c;
+  --color-success-bg: #f2fbf6;
+  --color-success-border: #d4f3e3;
+  --color-warning: #d97706;
+  --color-warning-bg: #fff8f0;
+  --color-warning-border: #ffedd5;
+  --color-info: #2d68f8;
+  --color-info-bg: #eff4ff;
+  --color-info-border: #dbeafe;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fff5f5;
+  --color-danger-border: #fee2e2;
+  --color-neutral: #475569;
+  --color-neutral-bg: #f1f5f9;
+  --color-neutral-border: #e2e8f0;
+
+  /* Tipografía */
+  --font-family: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-title: 24px;
+
+  /* Forma */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --control-height: 46px;
+
+  /* Sombras */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-primary: 0 4px 12px rgba(85, 69, 217, 0.2);
+  --shadow-card: 0 8px 30px rgba(35, 27, 100, 0.12);
+
+  --transition: 0.2s ease;
+
+  /* Breakpoints de referencia (CSS no admite variables dentro de @media) */
+  /* tablet: 900px · mobile: 768px */
+}
