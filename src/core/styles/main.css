@@ -1,0 +1,5 @@
+/* Punto de entrada de estilos globales (importado en main.ts). */
+@import './variables.css';
+@import './base.css';
+@import './forms.css';
+@import './utilities.css';
