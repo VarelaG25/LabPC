@@ -10,6 +10,18 @@ import './types'
  */
 const routes: RouteRecordRaw[] = [
   {
+    path: ROUTE_PATHS.LOGIN,
+    name: ROUTE_NAMES.LOGIN,
+    component: () => import('@/features/auth/views/LoginView.vue'),
+    meta: { title: 'Iniciar sesión', guestOnly: true },
+  },
+  {
+    path: ROUTE_PATHS.REGISTER,
+    name: ROUTE_NAMES.REGISTER,
+    component: () => import('@/features/auth/views/RegisterView.vue'),
+    meta: { title: 'Crear cuenta', guestOnly: true },
+  },
+  {
     // Las pantallas internas comparten el layout con menú lateral.
     path: ROUTE_PATHS.ROOT,
     component: DashboardLayout,
