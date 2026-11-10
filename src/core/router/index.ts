@@ -28,6 +28,12 @@ const routes: RouteRecordRaw[] = [
     redirect: { name: ROUTE_NAMES.LOGIN },
     meta: { requiresAuth: true },
     children: [
+      {
+        path: ROUTE_PATHS.CATALOG,
+        name: ROUTE_NAMES.CATALOG,
+        component: () => import('@/features/computers/views/ComputerCatalogView.vue'),
+        meta: { title: 'Equipos' },
+      },
     ],
   },
   {
