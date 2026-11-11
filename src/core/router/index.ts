@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import { ROUTE_NAMES, ROUTE_PATHS } from '@/core/constants'
+import { ROUTE_NAMES, ROUTE_PATHS, USER_ROLES } from '@/core/constants'
 import DashboardLayout from '@/core/layouts/DashboardLayout.vue'
 import { authGuard, updateDocumentTitle } from './guards'
 import './types'
+
+const { ADMIN } = USER_ROLES
 
 /**
  * Router de la aplicación.
@@ -28,6 +30,18 @@ const routes: RouteRecordRaw[] = [
     redirect: { name: ROUTE_NAMES.LOGIN },
     meta: { requiresAuth: true },
     children: [
+      {
+        path: ROUTE_PATHS.CATALOG,
+        name: ROUTE_NAMES.CATALOG,
+        component: () => import('@/features/computers/views/ComputerCatalogView.vue'),
+        meta: { title: 'Equipos' },
+      },
+      {
+        path: ROUTE_PATHS.COMPUTER_MANAGEMENT,
+        name: ROUTE_NAMES.COMPUTER_MANAGEMENT,
+        component: () => import('@/features/computers/views/ComputerManagementView.vue'),
+        meta: { title: 'Gestión de equipos', roles: [ADMIN] },
+      },
     ],
   },
   {
