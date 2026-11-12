@@ -37,6 +37,12 @@ const routes: RouteRecordRaw[] = [
         meta: { title: 'Equipos' },
       },
       {
+        path: ROUTE_PATHS.NEW_RESERVATION,
+        name: ROUTE_NAMES.NEW_RESERVATION,
+        component: () => import('@/features/reservations/views/NewReservationView.vue'),
+        meta: { title: 'Nueva reserva' },
+      },
+      {
         path: ROUTE_PATHS.COMPUTER_MANAGEMENT,
         name: ROUTE_NAMES.COMPUTER_MANAGEMENT,
         component: () => import('@/features/computers/views/ComputerManagementView.vue'),
