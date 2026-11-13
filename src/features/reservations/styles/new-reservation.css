@@ -1,0 +1,82 @@
+/* Estilos de la vista NewReservationView. */
+.reservation-form {
+  max-width: 800px;
+}
+
+.form-error {
+  margin-bottom: 16px;
+}
+
+.form-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.computer-selection {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.computer-field {
+  flex: 1;
+}
+
+.computer-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100px;
+  height: 70px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+  color: var(--color-text-strong);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.computer-preview.selected {
+  border-color: var(--color-primary-border);
+  color: var(--color-primary);
+}
+
+.specs {
+  margin-top: -8px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 900px) {
+  .computer-selection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .computer-preview {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-actions {
+    flex-direction: column;
+  }
+}

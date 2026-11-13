@@ -1,0 +1,91 @@
+/* Estilos de la vista ReservationDetailView. */
+.details-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.info-card h3 {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-strong);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.info-group {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.value {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-md);
+}
+
+.value.strong {
+  font-weight: 600;
+}
+
+.info-row {
+  display: grid;
+  gap: 16px;
+}
+
+.info-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info-row--2 .info-group {
+  margin-bottom: 0;
+}
+
+.form-error {
+  margin-bottom: 24px;
+}
+
+.actions-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Si no hay botón de cancelar, "Volver" queda alineado a la derecha. */
+.actions-footer > :only-child {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .details-grid,
+  .info-row--3,
+  .info-row--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .actions-footer {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .actions-footer > * {
+    width: 100%;
+  }
+}
