@@ -4,7 +4,7 @@ import DashboardLayout from '@/core/layouts/DashboardLayout.vue'
 import { authGuard, updateDocumentTitle } from './guards'
 import './types'
 
-const { ADMIN } = USER_ROLES
+const { STUDENT, ADMIN } = USER_ROLES
 
 /**
  * Router de la aplicación.
@@ -30,6 +30,12 @@ const routes: RouteRecordRaw[] = [
     redirect: { name: ROUTE_NAMES.LOGIN },
     meta: { requiresAuth: true },
     children: [
+      {
+        path: ROUTE_PATHS.HOME,
+        name: ROUTE_NAMES.HOME,
+        component: () => import('@/features/home/views/HomeView.vue'),
+        meta: { title: 'Inicio', roles: [STUDENT] },
+      },
       {
         path: ROUTE_PATHS.CATALOG,
         name: ROUTE_NAMES.CATALOG,
