@@ -66,6 +66,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('@/features/computers/views/ComputerManagementView.vue'),
         meta: { title: 'Gestión de equipos', roles: [ADMIN] },
       },
+      {
+        path: ROUTE_PATHS.INCIDENTS,
+        name: ROUTE_NAMES.INCIDENTS,
+        component: () => import('@/features/incidents/views/IncidentsView.vue'),
+        meta: { title: 'Incidencias', roles: [ADMIN] },
+      },
     ],
   },
   {
