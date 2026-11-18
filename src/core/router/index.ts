@@ -61,6 +61,12 @@ const routes: RouteRecordRaw[] = [
         meta: { title: 'Detalle de reserva' },
       },
       {
+        path: ROUTE_PATHS.ADMIN_DASHBOARD,
+        name: ROUTE_NAMES.ADMIN_DASHBOARD,
+        component: () => import('@/features/admin/views/AdminDashboardView.vue'),
+        meta: { title: 'Panel de administrador', roles: [ADMIN] },
+      },
+      {
         path: ROUTE_PATHS.COMPUTER_MANAGEMENT,
         name: ROUTE_NAMES.COMPUTER_MANAGEMENT,
         component: () => import('@/features/computers/views/ComputerManagementView.vue'),
