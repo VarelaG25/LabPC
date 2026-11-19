@@ -25,7 +25,7 @@ export const APP_CONFIG = {
  */
 export const API_FEATURES = {
   /** Indicadores del panel de administrador (`GET /admin/stats`). */
-  adminStats: false,
+  adminStats: true,
   /** Chat de soporte en tiempo real (Socket.io). */
   supportChat: false,
   /** Autenticación con token (JWT). */
